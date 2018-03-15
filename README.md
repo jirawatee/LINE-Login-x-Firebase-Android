@@ -36,4 +36,4 @@ Code guideline in integrating LINE Login with Firebase for Android developers
 * [สร้างระบบ Firebase Custom Authentication ด้วย LINE Login v2.1](https://medium.com/@jirawatee/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A-firebase-custom-authentication-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-line-login-v2-1-42f7dc35c9bb)
 
 ## Slide Decks
-* [LINE Developer Meetup, Thailand](https://developers.line.me/en/docs/line-login/overview/)
+* [LINE Developer Meetup, Thailand](https://docs.google.com/presentation/d/1HCgfoc2J2H5oyTYtULPsrbKaw3EL4D_o0vBj5zKrbTQ/edit?usp=sharing)
