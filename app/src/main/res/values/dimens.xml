@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="profile_image">240dp</dimen>
+</resources>

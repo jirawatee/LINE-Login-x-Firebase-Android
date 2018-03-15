@@ -1,0 +1,20 @@
+<resources>
+	<string name="app_name">LINE Login</string>
+
+	<string name="profile_user_id">MID: %s</string>
+	<string name="profile_uid">UID: %s</string>
+	<string name="profile_status_message">Status Message: %s</string>
+	<string name="profile_email">Email: %s</string>
+	<string name="profile_access_token">Access Token: %s</string>
+
+	<string name="btn_login_native">Native Login</string>
+	<string name="btn_login_browser">Browser Login</string>
+	<string name="btn_login_email">Login (Email)</string>
+	<string name="btn_refresh_token">Refresh Token</string>
+	<string name="btn_logout">Logout</string>
+
+	<string name="login_cancel">LINE Login was cancelled by user!</string>
+
+	<string name="login_error">No Firebase user data</string>
+	<string name="login_error_invalid_code">Invalid authorization code</string>
+</resources>

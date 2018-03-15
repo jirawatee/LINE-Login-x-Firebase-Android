@@ -1,0 +1,31 @@
+buildscript {
+	repositories {
+		google()
+		jcenter()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:3.0.1'
+		classpath 'com.google.gms:google-services:3.2.0'
+	}
+}
+
+allprojects {
+	repositories {
+		google()
+		jcenter()
+		flatDir {
+			dirs 'libs'
+		}
+	}
+}
+
+task clean(type: Delete) {
+	delete rootProject.buildDir
+}
+
+ext {
+	compileAndTargetSdk = 27
+	supportLibraryVersion = '27.1.0'
+	retrofitVersion = '2.4.0'
+	glideVersion = '4.6.1'
+}

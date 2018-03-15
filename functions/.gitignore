@@ -1,0 +1,15 @@
+# dependencies
+**/node_modules/*
+
+**/.firebaserc
+
+# misc
+*/npm-debug.log
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Firebase config
+service-account.json

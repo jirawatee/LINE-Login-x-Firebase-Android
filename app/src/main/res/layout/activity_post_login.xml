@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="@dimen/activity_margin">
+
+	<ScrollView
+		android:id="@+id/scroll"
+		android:layout_above="@+id/buttonPanel"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/profileImageView"
+				android:layout_width="@dimen/profile_image"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:contentDescription="@string/app_name"
+				tools:src="@mipmap/ic_launcher_round" />
+
+			<TextView
+				android:id="@+id/txt_display_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/activity_margin"
+				android:layout_marginTop="@dimen/activity_margin"
+				android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+				tools:text="@string/app_name" />
+
+			<TextView
+				android:id="@+id/txt_user_id"
+				style="@style/TextViewCustom"
+				tools:text="@string/profile_user_id" />
+
+			<TextView
+				android:id="@+id/txt_status_message"
+				style="@style/TextViewCustom"
+				tools:text="@string/profile_status_message" />
+
+			<TextView
+				android:id="@+id/txt_access_token"
+				style="@style/TextViewCustom"
+				tools:text="@string/profile_access_token" />
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/buttonPanel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btn_refresh_token"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/btn_refresh_token" />
+
+		<Button
+			android:id="@+id/btn_logout"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/btn_logout" />
+
+	</LinearLayout>
+
+</RelativeLayout>
