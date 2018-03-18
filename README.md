@@ -9,6 +9,13 @@ Code guideline in integrating LINE Login with Firebase for Android developers
 * [Create a channel on the LINE Developers console](https://developers.line.me/en/docs/line-login/getting-started/)
 * [LINE SDK for Android](https://developers.line.me/en/docs/line-login/downloads/)
 
+## Cloud Functions for Firebase
+* Select Blaze plan
+* Copy LINE Channel ID and set line.channelid in Google Cloud environment variable
+```
+firebase functions:config:set line.channelid="<your_channel_id>"
+```
+
 ## Features
 * App Login (SDK)
 * Web Login (SDK)
