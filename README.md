@@ -28,13 +28,7 @@ firebase functions:config:set line.channelid="<your_channel_id>"
 * Logout
 
 ## Screenshots
-<table width="100%">
-	<tr>
-	  <th><img src="https://user-images.githubusercontent.com/1763410/36966447-6bd1b5be-208f-11e8-9725-76879bbadbcf.png" width="100%"></th>
-	  <th><img src="https://user-images.githubusercontent.com/1763410/36966478-7d78e1ca-208f-11e8-9714-43c5c9bf3de8.png" width="100%"></th>
-    <th><img src="https://user-images.githubusercontent.com/1763410/36966511-93909f70-208f-11e8-8015-594caf3ffe85.png" width="100%"></th>
-	</tr>
-</table>
+<img src="https://user-images.githubusercontent.com/1763410/37565054-7dd4ed04-2ad4-11e8-9cec-f76b6933db5d.png" width="100%">
 
 ## Documentation
 * [LINE Login](https://developers.line.me/en/docs/line-login/overview/)
