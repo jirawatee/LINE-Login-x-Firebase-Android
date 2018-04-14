@@ -3,6 +3,7 @@ package jp.line.android.sdk.sample;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,8 +11,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.linecorp.linesdk.auth.LineLoginApi;
 import com.linecorp.linesdk.auth.LineLoginResult;
 
-import jp.line.android.sdk.sample.interfaces.Constants;
 import jp.line.android.sdk.sample.helpers.FirebaseHelper;
+import jp.line.android.sdk.sample.helpers.PreferenceHelper;
+import jp.line.android.sdk.sample.interfaces.Constants;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 	private static final int REQUEST_CODE_1 = 1;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		bindWidget();
+
+		Log.d("ACCESS_TOKEN", PreferenceHelper.getAccessToken(this));
 	}
 
 	@Override

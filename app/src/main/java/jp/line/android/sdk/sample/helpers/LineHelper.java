@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -20,8 +21,8 @@ import java.lang.ref.WeakReference;
 import jp.line.android.sdk.sample.MainActivity;
 import jp.line.android.sdk.sample.PostLoginActivity;
 import jp.line.android.sdk.sample.R;
-import jp.line.android.sdk.sample.interfaces.Constants;
 import jp.line.android.sdk.sample.configs.GlideApp;
+import jp.line.android.sdk.sample.interfaces.Constants;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
@@ -104,6 +105,7 @@ public class LineHelper {
 				activity.txtStatusMessage.setText(activity.getString(R.string.profile_status_message, profile.getStatusMessage()));
 
 				String token = lineApiClient.getCurrentAccessToken().getResponseData().getAccessToken();
+				Log.d("ACCESS_TOKEN", token);
 				activity.txtAccessToken.setText(activity.getString(R.string.profile_access_token, token));
 			} else {
 				activity.txtDisplayName.setText(apiResponse.getErrorData().toString());
