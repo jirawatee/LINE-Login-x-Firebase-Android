@@ -27,6 +27,7 @@ import jp.line.android.sdk.sample.interfaces.Constants;
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class LineHelper {
+	private static final String TAG = LineHelper.class.getSimpleName();
 	private static LineApiClient lineApiClient;
 
 	public static void verifyToken(MainActivity activity) {
@@ -105,7 +106,7 @@ public class LineHelper {
 				activity.txtStatusMessage.setText(activity.getString(R.string.profile_status_message, profile.getStatusMessage()));
 
 				String token = lineApiClient.getCurrentAccessToken().getResponseData().getAccessToken();
-				Log.d("ACCESS_TOKEN", token);
+				Log.d(TAG, token);
 				activity.txtAccessToken.setText(activity.getString(R.string.profile_access_token, token));
 			} else {
 				activity.txtDisplayName.setText(apiResponse.getErrorData().toString());
