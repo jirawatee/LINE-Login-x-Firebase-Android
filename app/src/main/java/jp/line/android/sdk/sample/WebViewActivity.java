@@ -40,7 +40,8 @@ public class WebViewActivity extends AppCompatActivity {
 				.appendQueryParameter("redirect_uri", CALLBACK_URL)
 				.appendQueryParameter("state", "12345abcde")
 				.appendQueryParameter("scope", "openid email profile")
-				.appendQueryParameter("nonce", "09876xyz");
+				.appendQueryParameter("nonce", "09876xyz")
+				.appendQueryParameter("bot_prompt", "normal");
 		String query = builder.build().toString();
 
 		mWebView.setWebViewClient(new WebViewClient() {
