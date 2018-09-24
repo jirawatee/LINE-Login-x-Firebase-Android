@@ -9,7 +9,12 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-exports.createCustomToken = functions.https.onRequest((request, response) => {
+const runtimeOpts = {
+	timeoutSeconds: 300,
+	memory: '2GB'
+}
+
+exports.createCustomToken = functions.region('asia-northeast1').runWith(runtimeOpts).https.onRequest((request, response) => {
   if (request.body.access_token === undefined) {
     const ret = {
       error_message: 'AccessToken not found',
