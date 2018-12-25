@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.linecorp.linesdk.LineAccessToken;
@@ -94,18 +93,17 @@ public class LineHelper {
 			if (apiResponse.isSuccess()) {
 				LineProfile profile = apiResponse.getResponseData();
 
-				ImageView profileImageView = activity.findViewById(R.id.profileImageView);
 				GlideApp.with(activity)
 						.load(profile.getPictureUrl())
 						.transition(withCrossFade())
 						.circleCrop()
-						.into(profileImageView);
+						.into(activity.profileImageView);
 
 				activity.txtDisplayName.setText(profile.getDisplayName());
 				activity.txtUserId.setText(activity.getString(R.string.profile_user_id, profile.getUserId()));
 				activity.txtStatusMessage.setText(activity.getString(R.string.profile_status_message, profile.getStatusMessage()));
 
-				String token = lineApiClient.getCurrentAccessToken().getResponseData().getAccessToken();
+				String token = lineApiClient.getCurrentAccessToken().getResponseData().getTokenString();
 				Log.d(TAG, token);
 				activity.txtAccessToken.setText(activity.getString(R.string.profile_access_token, token));
 			} else {
@@ -130,7 +128,7 @@ public class LineHelper {
 		protected void onPostExecute(LineApiResponse<LineAccessToken> response) {
 			PostLoginActivity activity = activityReference.get();
 			if (response.isSuccess()) {
-				String updatedAccessToken = lineApiClient.getCurrentAccessToken().getResponseData().getAccessToken();
+				String updatedAccessToken = lineApiClient.getCurrentAccessToken().getResponseData().getTokenString();
 				activity.txtAccessToken.setText(activity.getString(R.string.profile_access_token, updatedAccessToken));
 			} else {
 				activity.txtAccessToken.setText(response.getErrorData().toString());
