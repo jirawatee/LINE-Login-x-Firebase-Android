@@ -49,11 +49,6 @@
 				style="@style/TextViewCustom"
 				tools:text="@string/profile_access_token" />
 
-			<TextView
-				android:id="@+id/txt_email"
-				style="@style/TextViewCustom"
-				tools:text="@string/profile_email" />
-
 		</LinearLayout>
 
 	</ScrollView>

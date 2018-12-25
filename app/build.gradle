@@ -5,7 +5,7 @@ android {
 	buildToolsVersion "28.0.3"
 	defaultConfig {
 		applicationId "jp.line.android.sdk.sample"
-		minSdkVersion 28
+		minSdkVersion 27
 		targetSdkVersion compileAndTargetSdk
 		versionCode 1
 		versionName "1.0"
@@ -30,10 +30,6 @@ android {
 		preDexLibraries true
 		maxProcessCount 8
 	}
-	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
-	}
 }
 
 dependencies {
@@ -43,22 +39,13 @@ dependencies {
 	implementation ("com.android.support:customtabs:$supportLibraryVersion") {
 		force = true
 	}
-	implementation('com.madgag.spongycastle:prov:1.58.0.0') {
-		exclude group: 'junit', module: 'junit'
-	}
 
-	implementation 'com.google.firebase:firebase-core:16.0.6'
-	implementation 'com.google.firebase:firebase-auth:16.1.0'
-	implementation(name: 'line-sdk-5.0.1', ext: 'aar')
+	implementation 'com.google.firebase:firebase-core:16.0.4'
+	implementation 'com.google.firebase:firebase-auth:16.0.5'
+	implementation(name: 'line-sdk-4.0.8', ext: 'aar')
 
 	implementation 'com.google.code.gson:gson:2.8.5'
-
-	implementation 'io.jsonwebtoken:jjwt-api:0.10.5'
-	runtimeOnly ('io.jsonwebtoken:jjwt-impl:0.10.5')
-	runtimeOnly ('io.jsonwebtoken:jjwt-orgjson:0.10.5') {
-		exclude group: 'org.json', module: 'json' //provided by Android natively
-	}
-
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 	implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
 	implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 	implementation "com.github.bumptech.glide:glide:$glideVersion"
