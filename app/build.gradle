@@ -47,7 +47,7 @@ dependencies {
 		exclude group: 'junit', module: 'junit'
 	}
 
-	implementation 'com.google.firebase:firebase-core:16.0.6'
+	implementation 'com.google.firebase:firebase-core:16.0.7'
 	implementation 'com.google.firebase:firebase-auth:16.1.0'
 	implementation(name: 'line-sdk-5.0.1', ext: 'aar')
 
