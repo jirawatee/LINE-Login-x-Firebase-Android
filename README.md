@@ -3,7 +3,7 @@ Code guideline in integrating LINE Login with Firebase for Android developers
 
 ## Prerequisites
 * Supported Android 4.1 or newer
-* Android Studio 3.3.2 or higher
+* Android Studio 3.4.0 or higher
 * google-services.json in app-level folder
 * [Create a channel on the LINE Developers console](https://developers.line.me/en/docs/line-login/getting-started/)
 * [LINE SDK for Android](https://developers.line.me/en/docs/line-login/downloads/)
