@@ -2,10 +2,11 @@ package jp.line.android.sdk.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.linecorp.linesdk.Scope;
@@ -14,6 +15,7 @@ import com.linecorp.linesdk.auth.LineLoginApi;
 import com.linecorp.linesdk.auth.LineLoginResult;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 import jp.line.android.sdk.sample.helpers.FirebaseHelper;
 import jp.line.android.sdk.sample.helpers.PreferenceHelper;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		LineAuthenticationParams params = new LineAuthenticationParams.Builder()
 				.scopes(Arrays.asList(Scope.OPENID_CONNECT, Scope.OC_EMAIL, Scope.PROFILE))
 				.botPrompt(LineAuthenticationParams.BotPrompt.normal)
+				.uiLocale(new Locale("th", "TH"))
 				.build();
 
 		switch (view.getId()) {

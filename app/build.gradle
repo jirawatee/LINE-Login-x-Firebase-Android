@@ -49,13 +49,13 @@ dependencies {
 
 	implementation 'com.google.firebase:firebase-core:17.0.0'
 	implementation 'com.google.firebase:firebase-auth:18.0.0'
-	implementation(name: 'line-sdk-5.0.1', ext: 'aar')
+	implementation(name: 'line-sdk-5.1', ext: 'aar')
 
 	implementation 'com.google.code.gson:gson:2.8.5'
 
-	implementation 'io.jsonwebtoken:jjwt-api:0.10.5'
-	runtimeOnly ('io.jsonwebtoken:jjwt-impl:0.10.5')
-	runtimeOnly ('io.jsonwebtoken:jjwt-orgjson:0.10.5') {
+	implementation "io.jsonwebtoken:jjwt-api:$jwtVersion"
+	runtimeOnly ("io.jsonwebtoken:jjwt-impl:$jwtVersion")
+	runtimeOnly ("io.jsonwebtoken:jjwt-orgjson:$jwtVersion") {
 		exclude group: 'org.json', module: 'json' //provided by Android natively
 	}
 

@@ -28,4 +28,5 @@ ext {
 	supportLibraryVersion = '28.0.0'
 	retrofitVersion = '2.6.0'
 	glideVersion = '4.9.0'
+	jwtVersion = '0.10.6'
 }

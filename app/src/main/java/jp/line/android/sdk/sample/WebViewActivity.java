@@ -4,11 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -40,7 +41,6 @@ public class WebViewActivity extends AppCompatActivity {
 				.appendQueryParameter("redirect_uri", CALLBACK_URL)
 				.appendQueryParameter("state", "12345abcde")
 				.appendQueryParameter("scope", "openid email profile")
-				.appendQueryParameter("nonce", "09876xyz")
 				.appendQueryParameter("bot_prompt", "normal");
 		String query = builder.build().toString();
 
@@ -49,7 +49,7 @@ public class WebViewActivity extends AppCompatActivity {
 			public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
 				String url = request.getUrl().toString();
 				if (url.startsWith(CALLBACK_URL)) {
-					String arr[] = url.split(CALLBACK_URL);
+					String[] arr = url.split(CALLBACK_URL);
 					try {
 						Map<String, String> pairs = splitQuery(arr[1].substring(1));
 						if (pairs.get(CODE) != null) {
