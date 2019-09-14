@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-	implementation 'androidx.appcompat:appcompat:1.0.2'
+	implementation 'androidx.appcompat:appcompat:1.1.0'
 	implementation 'androidx.browser:browser:1.0.0'
 	implementation('com.madgag.spongycastle:prov:1.58.0.0') {
 		exclude group: 'junit', module: 'junit'
@@ -45,7 +45,7 @@ dependencies {
 
 	implementation 'com.google.firebase:firebase-core:17.2.0'
 	implementation 'com.google.firebase:firebase-auth:19.0.0'
-	implementation(name: 'line-sdk-5.1', ext: 'aar')
+	implementation(name: 'line-sdk-5.1.1', ext: 'aar')
 
 	implementation 'com.google.code.gson:gson:2.8.5'
 
