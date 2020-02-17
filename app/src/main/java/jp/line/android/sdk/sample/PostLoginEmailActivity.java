@@ -2,7 +2,8 @@ package jp.line.android.sdk.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +38,13 @@ public class PostLoginEmailActivity extends AppCompatActivity implements View.On
 			txtUserId.setText(getString(R.string.profile_uid, user.getUid()));
 			txtEmail.setText(getString(R.string.profile_email, user.getEmail()));
 			txtAccessToken.setText(getString(R.string.profile_access_token, PreferenceHelper.getAccessToken(this)));
-			GlideApp.with(this).load(user.getPhotoUrl()).transition(withCrossFade()).circleCrop().thumbnail(0.1f).into(imgProfile);
+			GlideApp.with(this)
+					.load(user.getPhotoUrl())
+					.transition(withCrossFade())
+					.circleCrop()
+					.thumbnail(0.1f)
+					.error(R.mipmap.ic_launcher_round)
+					.into(imgProfile);
 		} else {
 			mAuth.signOut();
 			startActivity(new Intent(this, MainActivity.class));

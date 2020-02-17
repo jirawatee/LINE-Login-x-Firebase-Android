@@ -1,7 +1,9 @@
 package jp.line.android.sdk.sample.helpers;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +28,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FirebaseHelper {
+	private static final String TAG = FirebaseHelper.class.getSimpleName();
+
 	public static void getLineToken(MainActivity activity, String lineCode) {
 		getLineTokenTask(activity, lineCode);
 	}
@@ -47,6 +51,7 @@ public class FirebaseHelper {
 			public void onResponse(Call<LineToken> call, Response<LineToken> response) {
 				LineToken lineToken = response.body();
 				if (lineToken != null) {
+					Log.d(TAG, lineToken.getAccess_token());
 					PreferenceHelper.setAccessToken(activity, lineToken.getAccess_token());
 					PreferenceHelper.setRefreshToken(activity, lineToken.getRefresh_token());
 					PreferenceHelper.setIdToken(activity, lineToken.getId_token());
@@ -85,18 +90,23 @@ public class FirebaseHelper {
 				if (firebaseCustomToken != null) {
 					String firebaseToken = firebaseCustomToken.getFirebase_token();
 					FirebaseAuth auth = FirebaseAuth.getInstance();
-					auth.signInWithCustomToken(firebaseToken).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
-						@Override
-						public void onComplete(@NonNull Task<AuthResult> task) {
-							DialogHelper.dismissDialog();
-							if (task.isSuccessful()) {
-								activity.startActivity(new Intent(activity, PostLoginEmailActivity.class));
-								activity.finish();
-							} else {
-								activity.txtStatus.setText(task.getException().getMessage());
+
+					if (firebaseToken != null) {
+						auth.signInWithCustomToken(firebaseToken).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
+							@Override
+							public void onComplete(@NonNull Task<AuthResult> task) {
+								DialogHelper.dismissDialog();
+								if (task.isSuccessful()) {
+									activity.startActivity(new Intent(activity, PostLoginEmailActivity.class));
+									activity.finish();
+								} else {
+									activity.txtStatus.setText(task.getException().getMessage());
+								}
 							}
-						}
-					});
+						});
+					} else {
+						activity.txtStatus.setText(R.string.login_error_multiple);
+					}
 				} else {
 					DialogHelper.dismissDialog();
 					activity.txtStatus.setText(R.string.login_error);

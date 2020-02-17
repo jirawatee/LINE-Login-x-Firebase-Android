@@ -16,5 +16,6 @@
 	<string name="login_cancel">LINE Login was cancelled by user!</string>
 
 	<string name="login_error">No Firebase user data</string>
+	<string name="login_error_multiple">Admin must allow users to create multiple accounts that use the same email.</string>
 	<string name="login_error_invalid_code">Invalid authorization code</string>
 </resources>
