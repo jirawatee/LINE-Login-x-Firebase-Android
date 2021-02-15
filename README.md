@@ -7,7 +7,7 @@ Code guideline in integrating LINE Login with Firebase for Android developers
 * Uses Gradle 4.1 or later
 * google-services.json in app-level folder
 * [Create a channel on the LINE Developers console](https://developers.line.me/en/docs/line-login/getting-started/)
-* [LINE SDK for Android](https://developers.line.me/en/docs/line-login/downloads/)
+* [LINE SDK for Android](https://developers.line.biz/en/docs/downloads/)
 
 ## Cloud Functions for Firebase
 * Select Blaze plan
