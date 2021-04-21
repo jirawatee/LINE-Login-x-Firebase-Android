@@ -7,10 +7,9 @@ Code guideline in integrating LINE Login with Firebase for Android developers
 * Uses Gradle 4.1 or later
 * google-services.json in app-level folder
 * [Create a channel on the LINE Developers console](https://developers.line.me/en/docs/line-login/getting-started/)
-* [LINE SDK for Android](https://developers.line.biz/en/docs/downloads/)
+* Create a Firebase project using the [Firebase Console](https://console.firebase.google.com/) and select <b>Blaze plan</b>
 
 ## Cloud Functions for Firebase
-* Select Blaze plan
 * Copy LINE Channel ID and set line.channelid in Google Cloud environment variable
 ```
 firebase functions:config:set line.channelid="<your_channel_id>"
@@ -32,6 +31,7 @@ firebase functions:config:set line.channelid="<your_channel_id>"
 
 ## Documentation
 * [LINE Login](https://developers.line.me/en/docs/line-login/overview/)
+* [Cloud Functions for Firebase](https://firebase.google.com/docs/functions/get-started)
 
 ## Blog
 * [สร้างระบบ Firebase Custom Authentication ด้วย LINE Login v2.1](https://medium.com/@jirawatee/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A-firebase-custom-authentication-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-line-login-v2-1-42f7dc35c9bb)
