@@ -23,8 +23,8 @@ task clean(type: Delete) {
 }
 
 ext {
-	compileAndTargetSdk = 29
+	compileAndTargetSdk = 30
 	retrofitVersion = '2.9.0'
-	glideVersion = '4.11.0'
+	glideVersion = '4.12.0'
 	jwtVersion = '0.11.2'
 }

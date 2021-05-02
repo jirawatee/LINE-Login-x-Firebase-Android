@@ -45,7 +45,7 @@ dependencies {
 
 	implementation 'com.google.firebase:firebase-analytics:18.0.3'
 	implementation 'com.google.firebase:firebase-auth:20.0.4'
-	implementation 'com.linecorp.linesdk:linesdk:5.6.0'
+	implementation 'com.linecorp.linesdk:linesdk:5.6.1'
 
 	implementation 'com.google.code.gson:gson:2.8.6'
 
