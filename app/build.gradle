@@ -47,7 +47,7 @@ dependencies {
 	implementation 'com.google.firebase:firebase-auth:21.0.1'
 	implementation 'com.linecorp.linesdk:linesdk:5.6.1'
 
-	implementation 'com.google.code.gson:gson:2.8.6'
+	implementation 'com.google.code.gson:gson:2.8.7'
 
 	implementation "io.jsonwebtoken:jjwt-api:$jwtVersion"
 	runtimeOnly ("io.jsonwebtoken:jjwt-impl:$jwtVersion")
