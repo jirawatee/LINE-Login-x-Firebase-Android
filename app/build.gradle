@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
 	compileSdkVersion compileAndTargetSdk
@@ -62,6 +63,3 @@ dependencies {
 	annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 	annotationProcessor 'androidx.annotation:annotation:1.2.0'
 }
-
-
-apply plugin: 'com.google.gms.google-services'
