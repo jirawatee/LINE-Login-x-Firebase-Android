@@ -44,7 +44,7 @@ dependencies {
 		exclude group: 'junit', module: 'junit'
 	}
 
-	implementation 'com.google.firebase:firebase-analytics:19.0.1'
+	implementation 'com.google.firebase:firebase-analytics:19.0.2'
 	implementation 'com.google.firebase:firebase-auth:21.0.1'
 	implementation 'com.linecorp.linesdk:linesdk:5.7.1'
 
